@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SafeLink – Cybersecurity URL/QR Scanner</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800 min-h-screen flex items-center justify-center p-6">
+  <div class="w-full max-w-2xl bg-white rounded-2xl shadow-xl p-6 space-y-6 text-center">
+    <h1 class="text-2xl font-bold text-blue-700">🛡️ SafeLink – URL & QR Threat Scanner</h1>
+
+    <input
+      type="text"
+      id="urlInput"
+      placeholder="Paste URL here..."
+      class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+    />
+    <button
+      onclick="scanURL()"
+      class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
+    >🔍 Scan URL</button>
+
+    <h3 class="text-lg font-semibold mt-4">Or Scan QR Code</h3>
+    <div id="qr-reader" class="mx-auto" style="width: 300px;"></div>
+
+    <div id="result" class="mt-4 text-lg font-semibold"></div>
+
+    <div class="text-left mt-6">
+      <h3 class="font-bold text-gray-700 mb-2">🔑 Security Tips</h3>
+      <ul class="list-disc pl-5 space-y-1 text-sm text-gray-600">
+        <li>Avoid unknown QR codes</li>
+        <li>Don’t click suspicious links</li>
+        <li>Check for HTTPS and correct spelling in domains</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
+  <script src="script.js"></script>
+</body>
+</html>
